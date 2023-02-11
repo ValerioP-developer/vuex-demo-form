@@ -2,11 +2,10 @@
   <div>
     <h4>Il mio Profilo</h4>
     <ul class="list-group list-group-flush">
-      <!--
-      <li class="list-group-item"><b>Nome : </b>{{ getName }}</li>
+      <li class="list-group-item"><b>Nome : </b>{{ name }}</li>
       <li class="list-group-item"><b>getNameSettings : </b>{{ getNameSettings }}</li>
       <li class="list-group-item"><b>Cognome : </b>{{ getCognome }}</li>
-      <li class="list-group-item"><b>Email : </b>{{ getEmail }}</li>-->
+      <li class="list-group-item"><b>Email : </b>{{ getEmail }}</li>
     </ul>
   </div>
 </template>
@@ -27,7 +26,14 @@ export default {
 
   },
   computed : {
-    
+    name:{
+      get:function(){
+          return this.$store.state.nameStore
+      },
+      set:function(newvalue){
+        this.$store.state.nameStore =newvalue
+      }
+     }
   },
   methods : {
 
