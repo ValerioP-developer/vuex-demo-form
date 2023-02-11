@@ -1,18 +1,64 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          Benvenuto : 
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <profile-component></profile-component>
+        </div>
+        <div class="col-md-6">
+            <profile-detail-component></profile-detail-component>
+        </div>
+      </div>
+
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ProfileDetailComponent from '@/components/ProfileDetailComponent.vue'
+import ProfileComponent from '@/components/ProfileComponent.vue'
+
+//import { mapGetters,mapMutations,mapActions,mapState } from 'vuex';
+
 
 export default {
   name: 'HomeView',
+  data (){
+    return {
+      colore : 'Verde'
+    }
+  },
+  computed : {
+    /*
+     ...mapState([
+        'profile.nome'
+       ]),
+       ...mapGetters({
+          'getName': 'profile/getName',
+          'getNameSettings': 'settings/getName',
+          'getEmail':'profile/getEmail'
+      }) */
+  },
+  methods : {
+    /* 
+    resetF(){
+      this.colore= 'Bianco';
+    }*/
+  },
   components: {
-    HelloWorld
+    
+    'profile-detail-component' : ProfileDetailComponent,
+    'profile-component' : ProfileComponent 
   }
 }
 </script>
+
+
+
