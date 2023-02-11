@@ -4,13 +4,12 @@
           <div class="card-header">Inserisci i dati</div>
           <div class="card-body">
             <div class="list-group">
-              <!--
-              <label>Nome: </label>
-              <input type="text" v-model="" name="nome" />
-              <label>Cognome: </label>
-              <input type="text" v-model="" name="cognome" />
-              <label>Email:  </label>
-              <input type="text" v-model="" name="email" />-->
+              <label>Nome: {{name}}</label>
+              <input type="text" v-model="name" name="name" />
+              <label>Cognome: {{lastname}}</label>
+              <input type="text" v-model="lastname" name="lastname" />
+              <label>Email: {{email}} </label>
+              <input type="text" v-model="email" name="email" />
             </div>
             <hr>
             <a href="#" class="btn btn-primary"  @click="invia()">Salva</a>
@@ -26,7 +25,11 @@
 export default {
   name: 'ProfileComponent',
   data (){
-  
+    return {
+        name : 'eef',
+        lastname : 'ggg',
+        email : 'pppp',      
+    }
     
   },
   computed : {
