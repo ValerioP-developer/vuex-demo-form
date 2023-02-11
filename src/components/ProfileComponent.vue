@@ -4,7 +4,7 @@
           <div class="card-header">Inserisci i dati</div>
           <div class="card-body">
             <div class="list-group">
-              <label>Nome: {{nameStore}}</label>
+              <label>Nome: {{name}}</label>
               <input type="text" v-model="name" name="name" />
               <label>Cognome: {{lastname}}</label>
               <input type="text" v-model="lastname" name="lastname" />
@@ -26,15 +26,24 @@ export default {
   name: 'ProfileComponent',
   data (){
     return {
-        name : 'eef',
+       // name : 'eef',
         lastname : 'ggg',
         email : 'pppp',      
     }
     
   },
   computed : {
+    /*
      nameStore(){
       return this.$store.state.nameStore
+     }*/
+     name:{
+      get:function(){
+          return this.$store.state.nameStore
+      },
+      set:function(newvalue){
+        this.$store.state.nameStore =newvalue
+      }
      }
   },
   methods : {
