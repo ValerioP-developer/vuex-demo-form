@@ -4,7 +4,7 @@
           <div class="card-header">Inserisci i dati</div>
           <div class="card-body">
             <div class="list-group">
-              <label>Nome: {{name}}</label>
+              <label>Nome: {{nameStore}}</label>
               <input type="text" v-model="name" name="name" />
               <label>Cognome: {{lastname}}</label>
               <input type="text" v-model="lastname" name="lastname" />
@@ -12,7 +12,7 @@
               <input type="text" v-model="email" name="email" />
             </div>
             <hr>
-            <a href="#" class="btn btn-primary"  @click="invia()">Salva</a>
+            <a href="#" class="btn btn-primary"  @click="send()">Salva</a>
           </div>
     </div>
   </div>
@@ -33,11 +33,14 @@ export default {
     
   },
   computed : {
-
+     nameStore(){
+      return this.$store.state.nameStore
+     }
   },
   methods : {
-  
-    
+    send(){
+    this.$store.state.nameStore = this.name
+    }
   },
 }
 </script>
