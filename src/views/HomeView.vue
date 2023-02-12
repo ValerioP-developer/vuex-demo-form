@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          Benvenuto : 
+          Benvenuto : {{name}}
         </div>
       </div>
       <hr>
@@ -36,21 +36,12 @@ export default {
     }
   },
   computed : {
-    /*
-     ...mapState([
-        'profile.nome'
-       ]),
-       ...mapGetters({
-          'getName': 'profile/getName',
-          'getNameSettings': 'settings/getName',
-          'getEmail':'profile/getEmail'
-      }) */
+    name(){
+          return this.$store.getters.getName;
+    }
   },
   methods : {
-    /* 
-    resetF(){
-      this.colore= 'Bianco';
-    }*/
+  
   },
   components: {
     
