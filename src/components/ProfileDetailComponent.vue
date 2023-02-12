@@ -26,14 +26,9 @@ export default {
 
   },
   computed : {
-    name:{
-      get:function(){
-          return this.$store.state.nameStore
-      },
-      set:function(newvalue){
-        this.$store.state.nameStore =newvalue
-      }
-     }
+    name(){
+          return this.$store.getters.getName;
+    }
   },
   methods : {
 
