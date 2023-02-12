@@ -20,7 +20,7 @@
 
 <script>
 
-//import { mapGetters,mapMutations,mapActions } from 'vuex';
+import { mapMutations } from 'vuex';
 
 export default {
   name: 'ProfileComponent',
@@ -33,6 +33,8 @@ export default {
     
   },
   computed : {
+     
+
     /*
      nameStore(){
       return this.$store.state.nameStore
@@ -47,8 +49,12 @@ export default {
      }
   },
   methods : {
+    ...mapMutations([
+      'setName'
+    ]),
     send(){
-    this.$store.commit('setName','newVAlerio');
+      // this.$store.commit('setName','newVAlerio');
+      this.setName('usingMapMutations');
     }
   },
 }
