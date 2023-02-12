@@ -5,14 +5,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    nameStore: 'Testtt2222'
+    nameStore: 'ciaooo'
   },
   getters: {
     getName:state => {
-      return state.nameStore.substr(0,3)
+      return state.nameStore
     }
   },
   mutations: {
+     setName :(state,othername) =>{
+      state.nameStore= othername;
+     }
   },
   actions: {
   },
