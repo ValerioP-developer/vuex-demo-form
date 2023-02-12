@@ -8,6 +8,9 @@ export default new Vuex.Store({
     nameStore: 'Testtt2222'
   },
   getters: {
+    getName:state => {
+      return state.nameStore.substr(0,3)
+    }
   },
   mutations: {
   },
