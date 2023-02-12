@@ -48,7 +48,7 @@ export default {
   },
   methods : {
     send(){
-    this.$store.state.nameStore = this.name
+    this.$store.commit('setName','newVAlerio');
     }
   },
 }
