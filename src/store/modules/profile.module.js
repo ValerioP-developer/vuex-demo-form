@@ -4,8 +4,9 @@ const state ={
     email :''
 };
 const getters ={
-    getName:state => {
-        return state.nameStore
+
+      getName:(state,getters,rootState,rootGetters)  => {
+      return state.nameStore + " -" + rootGetters['settings/getName'];
       },
       getLastname:state => {
         return state.lastname

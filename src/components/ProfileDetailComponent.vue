@@ -34,13 +34,12 @@ export default {
     ])*/
     ...mapGetters({
           'getName':'profile/getName',
-          //it will be in the lastname --> it is just a test to show how to refers to different modules
-          'getNameSetting':'settings/getName',
-          'getLastname' : 'profile/getLastname'
+          'getLastname' : 'profile/getLastname',
+          //it will be in the lastname --> it is just a test to show how to refers to different modules belove --> settings module
+          'getNameSetting':'settings/getName'
     })
   },
   methods : {
-
   },
   props: {
 
