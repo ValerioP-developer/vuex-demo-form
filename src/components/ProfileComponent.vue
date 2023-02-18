@@ -5,11 +5,11 @@
           <div class="card-body">
             <div class="list-group">
               <label>Nome: {{name}}</label>
-              <input type="text" v-model="name" name="name" />
+              <input type="text" v-model="profile.name" name="name" />
               <label>Cognome: {{lastname}}</label>
-              <input type="text" v-model="lastname" name="lastname" />
+              <input type="text" v-model="profile.lastname" name="lastname" />
               <label>Email: {{email}} </label>
-              <input type="text" v-model="email" name="email" />
+              <input type="text" v-model="profile.email" name="email" />
             </div>
             <hr>
             <a href="#" class="btn btn-primary"  @click="send()">Salva</a>
@@ -20,21 +20,20 @@
 
 <script>
 
-import { mapMutations } from 'vuex';
+import { mapMutations ,mapActions} from 'vuex';
 
 export default {
   name: 'ProfileComponent',
   data (){
     return {
-       // name : 'eef',
-        lastname : 'ggg',
-        email : 'pppp',      
+      profile : {
+        nome : '',
+        cognome : '',
+        email : '',
+      }
     }
-    
   },
   computed : {
-     
-
     /*
      nameStore(){
       return this.$store.state.nameStore
@@ -52,9 +51,15 @@ export default {
     ...mapMutations([
       'setName'
     ]),
+    ...mapActions([
+      'actionProfile'
+    ]),
+
+
     send(){
       // this.$store.commit('setName','newVAlerio');
-      this.setName('usingMapMutations');
+      //this.setName('usingMapMutations');
+      this.actionProfile(this.profile);
     }
   },
 }
