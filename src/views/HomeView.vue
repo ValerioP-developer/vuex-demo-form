@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          Benvenuto : {{name}}
+          Benvenuto : {{nameStore}}
         </div>
       </div>
       <hr>
@@ -24,8 +24,9 @@
 // @ is an alias to /src
 import ProfileDetailComponent from '@/components/ProfileDetailComponent.vue'
 import ProfileComponent from '@/components/ProfileComponent.vue'
+import { mapState } from 'vuex';
 
-//import { mapGetters,mapMutations,mapActions,mapState } from 'vuex';
+//import { mapState } from 'vuex';
 
 
 export default {
@@ -36,9 +37,13 @@ export default {
     }
   },
   computed : {
-    name(){
+
+    ...mapState([
+          'nameStore',
+    ])
+    /*name(){
           return this.$store.getters.getName;
-    }
+    }*/
   },
   methods : {
   
