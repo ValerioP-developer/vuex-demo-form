@@ -25,7 +25,8 @@ export default {
 
   },
   computed : {
-    ...mapGetters([
+    //it refers to profile module actions
+    ...mapGetters('profile',[
           'getName',
           'getEmail',
           'getLastname'

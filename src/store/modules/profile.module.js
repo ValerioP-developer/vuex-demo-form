@@ -37,9 +37,15 @@ const mutations ={
        }
 };
 export default{
+    /*
+    BY ADDING NAMESPACED TRUE 
+      
+    It will be possible to refers to a specific module from a component
+    
+    */ 
+    namespaced: true,
     state,
     getters,
     actions,
     mutations
 }
-

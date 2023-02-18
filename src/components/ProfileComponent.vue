@@ -51,7 +51,8 @@ export default {
     ...mapMutations([
       'setName'
     ]),
-    ...mapActions([
+    //It refers to profile module action
+    ...mapActions('profile',[
       'actionProfile'
     ]),
 
