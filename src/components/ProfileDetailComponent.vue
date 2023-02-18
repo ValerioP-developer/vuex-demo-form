@@ -26,11 +26,17 @@ export default {
   },
   computed : {
     //it refers to profile module actions
+    /*
     ...mapGetters('profile',[
           'getName',
           'getEmail',
           'getLastname'
-    ])
+    ])*/
+    ...mapGetters({
+          'getName':'profile/getName',
+          'getEmail':'profile/getEmail',
+           'getLastname' : 'profile/getLastname'
+    })
   },
   methods : {
 
