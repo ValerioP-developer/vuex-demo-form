@@ -3,8 +3,8 @@
     <h4>Il mio Profilo</h4>
     <ul class="list-group list-group-flush">
       <li class="list-group-item"><b>Nome : </b>{{ getName }}</li>
-      <li class="list-group-item"><b>Cognome : </b>{{ getLastname }}</li>
-      <li class="list-group-item"><b>Email : </b>{{ getEmail }}</li>
+      <li class="list-group-item"><b>Cognome : </b>{{ getNameSetting }}</li>
+      <li class="list-group-item"><b>Email : </b>{{ getLastname }}</li>
     </ul>
   </div>
 </template>
@@ -34,8 +34,9 @@ export default {
     ])*/
     ...mapGetters({
           'getName':'profile/getName',
-          'getEmail':'profile/getEmail',
-           'getLastname' : 'profile/getLastname'
+          //it will be in the lastname --> it is just a test to show how to refers to different modules
+          'getNameSetting':'settings/getName',
+          'getLastname' : 'profile/getLastname'
     })
   },
   methods : {
