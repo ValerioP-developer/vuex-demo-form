@@ -34,7 +34,9 @@ const protect = (to, from, next) => {
 */
 
 export default new Router({
-  //mode: 'hash',
+  //mode:'history',
+
+  mode: 'hash',
   routes: [
     {
       path: '/',
