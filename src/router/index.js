@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Home from '../views/HomeView.vue'
 import ProfileDetailComponent from '../components/ProfileDetailComponent.vue'
+import ProfileComponent from '../components/ProfileComponent.vue'
 
 //Profile
 /*import RootProfile from '../components/profile/RootProfile.vue'
@@ -47,6 +48,11 @@ export default new Router({
       path: '/profile',
       component: ProfileDetailComponent,
       name: 'profile',
+    },
+    {
+      path: '/profile-new',
+      component: ProfileComponent,
+      name: 'profile-new',
     },
    
    /* {
