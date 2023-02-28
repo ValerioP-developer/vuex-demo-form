@@ -1,7 +1,8 @@
 <template>
      <div id="nav">
           <router-link to="/">Home</router-link> !
-          <router-link to="/profile">Profile</router-link> ! 
+          <router-link to="/profile/1254">Profile 1254</router-link> ! 
+          <router-link to="/profile/4">Profile 4</router-link> ! 
           <router-link to="/profile-new">Insert Data</router-link> ! 
           <span style="float:right;">
         <!-- Default dropleft button -->

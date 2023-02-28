@@ -61,6 +61,7 @@ export default {
       // this.$store.commit('setName','newVAlerio');
       //this.setName('usingMapMutations');
       this.actionProfile(this.profile);
+      //redirect to the other component
       this.$router.push('/profile');
     }
   },

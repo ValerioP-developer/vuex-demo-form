@@ -50,6 +50,11 @@ export default new Router({
       name: 'profile',
     },
     {
+      path: '/profile/:id',
+      component: ProfileDetailComponent,
+      name: 'profile',
+    },
+    {
       path: '/profile-new',
       component: ProfileComponent,
       name: 'profile-new',

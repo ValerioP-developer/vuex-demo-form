@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>Il mio Profilo</h4>
+    <h4>Il mio Profilo ID: {{id}}</h4>
     <ul class="list-group list-group-flush">
       <li class="list-group-item"><b>Nome : </b>{{ getName }}</li>
       <li class="list-group-item"><b>Cognome : </b>{{ getNameSetting }}</li>
@@ -18,11 +18,18 @@ export default {
   name: 'ProfileDetailComponent',
   data (){
     return {
-
+         //$route
+          id:this.$route.params.id
     }
   },
   created(){
 
+  },
+  watch:{
+    //change id when click on different route
+    '$route'(to){
+      this.id = to.params.id;
+    }
   },
   computed : {
     //it refers to profile module actions
