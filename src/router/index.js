@@ -10,6 +10,7 @@ const NewProfile = () => import( '../components/profile/NewProfile.vue');
 const DetailProfile = () => import( '../components/profile/DetailProfile.vue');
 const ListProfile = () => import( '../components/profile/ListProfile.vue');
 
+const NotFoundComponent = () => import( '../components/profile/NotFoundComponent.vue');
 
 Vue.use(Router);
 
@@ -34,6 +35,11 @@ export default new Router({
       component: Home,
       name: 'home',
     },
+    {
+      path: '/404',
+      component: NotFoundComponent,
+      name: 'NotFound',
+    },
     /*
     {
       path: '/profile',
@@ -55,11 +61,11 @@ export default new Router({
       component: ProfileComponent,
       name: 'profile-new',
     },
-   /* {
-      path: '/404',
-      component: NotFoundComponent,
-      name: 'notFound'
-    },
+   {
+      path: '*',
+      redirect:{name:'NotFound'}
+   }
+    /* ,
     {
       path: '/profile',
       name: 'profile',
